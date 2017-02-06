@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="databaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Produtos">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Produto" Type="nvarchar" MaxLength="255" />
+          <Property Name="Descricao" Type="nvarchar" MaxLength="255" />
+          <Property Name="cdTipoProduto" Type="int" />
+          <Property Name="cdCF" Type="int" />
+          <Property Name="PesoBruto" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="PesoLiquido" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="CodigoBarra" Type="nvarchar" MaxLength="13" />
+          <Property Name="cdUnidade" Type="int" />
+          <Property Name="Status" Type="char" MaxLength="1" />
+          <Property Name="cdComprador" Type="int" />
+          <Property Name="cdLocalizacao" Type="int" />
+          <Property Name="EstoqueFisico" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="OrigemProduto" Type="char" MaxLength="1" />
+          <Property Name="DataCadastro" Type="datetime" />
+          <Property Name="DataUltCompra" Type="datetime" />
+          <Property Name="DataUltRecebimento" Type="datetime" />
+          <Property Name="QtdeInventario" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="InventarioAtualizado" Type="nvarchar" MaxLength="1" />
+          <Property Name="LinhaProduto" Type="int" />
+          <Property Name="FamiliaProduto" Type="int" />
+          <Property Name="CustoMedio" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="EstoqueMinimo" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="PontoPedido" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="MaiorPrecoCompra" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Referencia" Type="nvarchar" MaxLength="6" />
+          <Property Name="Comissao" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="CustoTotalMarkup" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Espessura" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="LarguraProduto" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Comprimento" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="PesoProduto" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="DiamInterno" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="DiamExterno" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Obs1" Type="nvarchar" MaxLength="80" />
+          <Property Name="Obs2" Type="nvarchar" MaxLength="80" />
+          <Property Name="Obs3" Type="nvarchar" MaxLength="80" />
+          <Property Name="Obs4" Type="nvarchar" MaxLength="80" />
+          <Property Name="Obs5" Type="nvarchar" MaxLength="80" />
+          <Property Name="Mk01" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Mk02" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Mk03" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Mk04" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Mk05" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Pb01" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Pb02" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Pb03" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Pb04" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Pb05" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="CustoFabricacao" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="BaixaEstoque" Type="nvarchar" MaxLength="1" />
+          <Property Name="CustoGeralMarkup" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="CodigoProdutoPai" Type="nvarchar" MaxLength="20" />
+          <Property Name="Componente" Type="nvarchar" MaxLength="1" />
+          <Property Name="CodigoBarraInterno" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="BaixaEstoqueOS" Type="nvarchar" MaxLength="1" />
+          <Property Name="UtilizacaoProduto" Type="nvarchar(max)" />
+          <Property Name="ProdutoImportado" Type="nvarchar" MaxLength="1" />
+          <Property Name="BaixaEstoqueIntermediario" Type="nvarchar" MaxLength="1" />
+          <Property Name="Tipo" Type="nvarchar" MaxLength="1" />
+          <Property Name="UltimoOrcamento" Type="datetime" />
+          <Property Name="UltimaMovimentacao" Type="datetime" />
+          <Property Name="AtualizaEstoque" Type="nvarchar" MaxLength="5" />
+          <Property Name="CodigoBarraPCP" Type="decimal" Precision="10" Scale="0" />
+          <Property Name="UltimoPrecoCompra" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="PontoPedidoCompra" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="QtdeOCAuto" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="EspecificacaoProduto" Type="nvarchar(max)" />
+          <Property Name="NrDesenho" Type="nvarchar" MaxLength="15" />
+          <Property Name="Largura" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="PesoEspecifico" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="CustoReposicao" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="TipoImposto" Type="int" />
+          <Property Name="CodigoTamanhoBarril" Type="int" />
+          <Property Name="VlrComodato" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="CodigoSaborChop" Type="int" />
+          <Property Name="CodigoBarraVenda" Type="nvarchar" MaxLength="13" />
+          <Property Name="CodigoSistemaRede" Type="nvarchar" MaxLength="10" />
+          <Property Name="QtdeLitros" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="DataUltimoInventario" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="databaseModelStoreContainer">
+          <EntitySet Name="Produtos" EntityType="Self.Produtos" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="databaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Produtos">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Produto" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Descricao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="cdTipoProduto" Type="Int32" />
+          <Property Name="cdCF" Type="Int32" />
+          <Property Name="PesoBruto" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="PesoLiquido" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="CodigoBarra" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="cdUnidade" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="cdComprador" Type="Int32" />
+          <Property Name="cdLocalizacao" Type="Int32" />
+          <Property Name="EstoqueFisico" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="OrigemProduto" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DataCadastro" Type="DateTime" Precision="3" />
+          <Property Name="DataUltCompra" Type="DateTime" Precision="3" />
+          <Property Name="DataUltRecebimento" Type="DateTime" Precision="3" />
+          <Property Name="QtdeInventario" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="InventarioAtualizado" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="LinhaProduto" Type="Int32" />
+          <Property Name="FamiliaProduto" Type="Int32" />
+          <Property Name="CustoMedio" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="EstoqueMinimo" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="PontoPedido" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="MaiorPrecoCompra" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Referencia" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="Comissao" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="CustoTotalMarkup" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Espessura" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="LarguraProduto" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Comprimento" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="PesoProduto" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="DiamInterno" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="DiamExterno" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Obs1" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Obs2" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Obs3" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Obs4" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Obs5" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Mk01" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Mk02" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Mk03" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Mk04" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Mk05" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Pb01" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Pb02" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Pb03" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Pb04" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Pb05" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="CustoFabricacao" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="BaixaEstoque" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="CustoGeralMarkup" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="CodigoProdutoPai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Componente" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="CodigoBarraInterno" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="BaixaEstoqueOS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="UtilizacaoProduto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProdutoImportado" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="BaixaEstoqueIntermediario" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Tipo" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="UltimoOrcamento" Type="DateTime" Precision="3" />
+          <Property Name="UltimaMovimentacao" Type="DateTime" Precision="3" />
+          <Property Name="AtualizaEstoque" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="CodigoBarraPCP" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="UltimoPrecoCompra" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="PontoPedidoCompra" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="QtdeOCAuto" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="EspecificacaoProduto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NrDesenho" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Largura" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="PesoEspecifico" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="CustoReposicao" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="TipoImposto" Type="Int32" />
+          <Property Name="CodigoTamanhoBarril" Type="Int32" />
+          <Property Name="VlrComodato" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="CodigoSaborChop" Type="Int32" />
+          <Property Name="CodigoBarraVenda" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="CodigoSistemaRede" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="QtdeLitros" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="DataUltimoInventario" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="databaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Produtos" EntityType="Self.Produtos" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="databaseModelStoreContainer" CdmEntityContainer="databaseEntities">
+          <EntitySetMapping Name="Produtos">
+            <EntityTypeMapping TypeName="databaseModel.Produtos">
+              <MappingFragment StoreEntitySet="Produtos">
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Produto" ColumnName="Produto" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="cdTipoProduto" ColumnName="cdTipoProduto" />
+                <ScalarProperty Name="cdCF" ColumnName="cdCF" />
+                <ScalarProperty Name="PesoBruto" ColumnName="PesoBruto" />
+                <ScalarProperty Name="PesoLiquido" ColumnName="PesoLiquido" />
+                <ScalarProperty Name="CodigoBarra" ColumnName="CodigoBarra" />
+                <ScalarProperty Name="cdUnidade" ColumnName="cdUnidade" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="cdComprador" ColumnName="cdComprador" />
+                <ScalarProperty Name="cdLocalizacao" ColumnName="cdLocalizacao" />
+                <ScalarProperty Name="EstoqueFisico" ColumnName="EstoqueFisico" />
+                <ScalarProperty Name="OrigemProduto" ColumnName="OrigemProduto" />
+                <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+                <ScalarProperty Name="DataUltCompra" ColumnName="DataUltCompra" />
+                <ScalarProperty Name="DataUltRecebimento" ColumnName="DataUltRecebimento" />
+                <ScalarProperty Name="QtdeInventario" ColumnName="QtdeInventario" />
+                <ScalarProperty Name="InventarioAtualizado" ColumnName="InventarioAtualizado" />
+                <ScalarProperty Name="LinhaProduto" ColumnName="LinhaProduto" />
+                <ScalarProperty Name="FamiliaProduto" ColumnName="FamiliaProduto" />
+                <ScalarProperty Name="CustoMedio" ColumnName="CustoMedio" />
+                <ScalarProperty Name="EstoqueMinimo" ColumnName="EstoqueMinimo" />
+                <ScalarProperty Name="PontoPedido" ColumnName="PontoPedido" />
+                <ScalarProperty Name="MaiorPrecoCompra" ColumnName="MaiorPrecoCompra" />
+                <ScalarProperty Name="Referencia" ColumnName="Referencia" />
+                <ScalarProperty Name="Comissao" ColumnName="Comissao" />
+                <ScalarProperty Name="CustoTotalMarkup" ColumnName="CustoTotalMarkup" />
+                <ScalarProperty Name="Espessura" ColumnName="Espessura" />
+                <ScalarProperty Name="LarguraProduto" ColumnName="LarguraProduto" />
+                <ScalarProperty Name="Comprimento" ColumnName="Comprimento" />
+                <ScalarProperty Name="PesoProduto" ColumnName="PesoProduto" />
+                <ScalarProperty Name="DiamInterno" ColumnName="DiamInterno" />
+                <ScalarProperty Name="DiamExterno" ColumnName="DiamExterno" />
+                <ScalarProperty Name="Obs1" ColumnName="Obs1" />
+                <ScalarProperty Name="Obs2" ColumnName="Obs2" />
+                <ScalarProperty Name="Obs3" ColumnName="Obs3" />
+                <ScalarProperty Name="Obs4" ColumnName="Obs4" />
+                <ScalarProperty Name="Obs5" ColumnName="Obs5" />
+                <ScalarProperty Name="Mk01" ColumnName="Mk01" />
+                <ScalarProperty Name="Mk02" ColumnName="Mk02" />
+                <ScalarProperty Name="Mk03" ColumnName="Mk03" />
+                <ScalarProperty Name="Mk04" ColumnName="Mk04" />
+                <ScalarProperty Name="Mk05" ColumnName="Mk05" />
+                <ScalarProperty Name="Pb01" ColumnName="Pb01" />
+                <ScalarProperty Name="Pb02" ColumnName="Pb02" />
+                <ScalarProperty Name="Pb03" ColumnName="Pb03" />
+                <ScalarProperty Name="Pb04" ColumnName="Pb04" />
+                <ScalarProperty Name="Pb05" ColumnName="Pb05" />
+                <ScalarProperty Name="CustoFabricacao" ColumnName="CustoFabricacao" />
+                <ScalarProperty Name="BaixaEstoque" ColumnName="BaixaEstoque" />
+                <ScalarProperty Name="CustoGeralMarkup" ColumnName="CustoGeralMarkup" />
+                <ScalarProperty Name="CodigoProdutoPai" ColumnName="CodigoProdutoPai" />
+                <ScalarProperty Name="Componente" ColumnName="Componente" />
+                <ScalarProperty Name="CodigoBarraInterno" ColumnName="CodigoBarraInterno" />
+                <ScalarProperty Name="BaixaEstoqueOS" ColumnName="BaixaEstoqueOS" />
+                <ScalarProperty Name="UtilizacaoProduto" ColumnName="UtilizacaoProduto" />
+                <ScalarProperty Name="ProdutoImportado" ColumnName="ProdutoImportado" />
+                <ScalarProperty Name="BaixaEstoqueIntermediario" ColumnName="BaixaEstoqueIntermediario" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="UltimoOrcamento" ColumnName="UltimoOrcamento" />
+                <ScalarProperty Name="UltimaMovimentacao" ColumnName="UltimaMovimentacao" />
+                <ScalarProperty Name="AtualizaEstoque" ColumnName="AtualizaEstoque" />
+                <ScalarProperty Name="CodigoBarraPCP" ColumnName="CodigoBarraPCP" />
+                <ScalarProperty Name="UltimoPrecoCompra" ColumnName="UltimoPrecoCompra" />
+                <ScalarProperty Name="PontoPedidoCompra" ColumnName="PontoPedidoCompra" />
+                <ScalarProperty Name="QtdeOCAuto" ColumnName="QtdeOCAuto" />
+                <ScalarProperty Name="EspecificacaoProduto" ColumnName="EspecificacaoProduto" />
+                <ScalarProperty Name="NrDesenho" ColumnName="NrDesenho" />
+                <ScalarProperty Name="Largura" ColumnName="Largura" />
+                <ScalarProperty Name="PesoEspecifico" ColumnName="PesoEspecifico" />
+                <ScalarProperty Name="CustoReposicao" ColumnName="CustoReposicao" />
+                <ScalarProperty Name="TipoImposto" ColumnName="TipoImposto" />
+                <ScalarProperty Name="CodigoTamanhoBarril" ColumnName="CodigoTamanhoBarril" />
+                <ScalarProperty Name="VlrComodato" ColumnName="VlrComodato" />
+                <ScalarProperty Name="CodigoSaborChop" ColumnName="CodigoSaborChop" />
+                <ScalarProperty Name="CodigoBarraVenda" ColumnName="CodigoBarraVenda" />
+                <ScalarProperty Name="CodigoSistemaRede" ColumnName="CodigoSistemaRede" />
+                <ScalarProperty Name="QtdeLitros" ColumnName="QtdeLitros" />
+                <ScalarProperty Name="DataUltimoInventario" ColumnName="DataUltimoInventario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
